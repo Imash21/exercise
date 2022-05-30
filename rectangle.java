@@ -7,9 +7,8 @@ class Main {
         Rectangle.finalResult();
     }
 }
-
 class Rectangle {
-    static float width, height, result; // Formula = W * H
+    static float width, height, result; 
 
     public static void getData() throws NumberFormatException, IOException {
         BufferedReader BR = new BufferedReader(new InputStreamReader(System.in));
@@ -18,18 +17,13 @@ class Rectangle {
         width = Float.parseFloat(BR.readLine());
         System.out.print("Great! Now please, tell us how tall is it?: ");
         height = Float.parseFloat(BR.readLine());
-
-        // System.out.println(width + " " + height);
     }
-
     public static void computeField() {
         result = width * height;
     }
-
     public static void displayField() {
         System.out.println("Your rectangle result is: " + result);
     }
-
     public static void finalResult() throws NumberFormatException, IOException {
         getData();
         computeField();
